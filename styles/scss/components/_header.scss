@@ -1,0 +1,76 @@
+.header {
+    height: 13.1rem;
+
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+
+        height: 100%;
+        width: 100%;
+
+        background-color: $color-white;
+        box-shadow: 0 4px 24px rgba(168, 168, 168, 0.25);
+        border-radius: 3.5rem;
+
+        .navigation__title {
+            width: 58.8rem;
+            height: 50%;
+            background-color: $color-blue;
+            color: $color-white;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            border-radius: 0 1.4rem 1.5rem 0;
+            @include pl-1;
+
+            p {
+                font-size: 1.4rem;
+
+            }
+        }
+
+        .navigation__buttons {
+            display: flex;
+            gap: 1.6rem;
+
+            button {
+                @include button;
+            }
+
+            .btn-save-local {
+                background-color: $color-green;
+            }
+
+            .btn-exclude-local {
+                background-color: $color-red;
+            }
+        }
+
+        .navigation__date {
+            justify-self: flex-end;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 24.1rem;
+            margin-right: 3.7rem;
+
+            color: $text-grey;
+
+            .time__hours {
+                font-size: 4rem;
+            }
+
+
+        }
+    }
+}
