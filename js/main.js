@@ -12,6 +12,22 @@ const planner = document.querySelector(".planner-calendar__table");
 const cardTime = document.querySelectorAll(".hours__card");
 
 
+// Adicionar task
+
+function addTask() {
+  const task = {
+    id: taskList.length,
+    content: activitiesContent.value,
+    dayOfWeek: selectedDay.value,
+    dayTimeValue: dayTime.value,
+    dayTime: dayTime.options[dayTime.selectedIndex].text,
+    conflict: false,
+  };
+
+  taskList.push(task);
+  // displayTaskList(taskList);
+}
+
 excludeAllTaskBtn.addEventListener("click", excludeAllTasksFromOneDay);
 
 function excludeAllTasksFromOneDay() {
