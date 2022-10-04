@@ -25,7 +25,7 @@ Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de 
 ### 📔 Bibliotecas
 - [FontAwesomeIcons](https://fontawesome.com/)
 
-## 📝 Requisitos 
+## 📝 Requisitos funcionais
 - [X] Adicionar as atividades no dia e hora selecionados
 - [ ] O horário pode ser editado nos minutos
 - [X] Botão para adicionar a atividade quando preenchido corretamente todos os campos;
@@ -37,6 +37,11 @@ Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de 
 - [X] Cada card de atividade deve ter um botão para ser excluído no caso de conflitos;
 - [X] Salvar/recuperar as atividades do localStorage
 - [X] Scroll estilizado
+
+### Requisitos adicionais
+- [] Animações ao adicionar um card
+- [] Skeleton-Animation ao carregar itens do local-storage
+- [] Substituir alert() por toast notifications
 
 ### 📱 Responsividade  
 - [X] Desktop
