@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+html {
+    font-size: 62.5%; // 10px
+}
+
+body {
+    font-family: $font;
+    font-size: 1.6rem;
+
+    background-color: $color-body;
+}
+
+button {
+    font-family: $font;
+    border: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input, input:focus {
+    font-family: $font;
+}
+
+.active {
+    transform: translateY(-5px);
+}
