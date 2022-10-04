@@ -1,0 +1,108 @@
+@mixin pl-1 {
+    padding-left: 1.6rem;
+}
+
+// Adicionar width como parâmetro
+@mixin button {
+    color: $color-white;
+    width: 18rem;
+    height: 4rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: $font;
+    font-weight: 400;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 1rem;
+}
+
+
+@mixin cardButton {
+    color: $color-white;
+    font-family: $font;
+    font-weight: 700;
+    font-size: 1.7rem;
+
+    cursor: pointer;
+    text-align: center;
+
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+
+    border: none;
+    border-radius: .9rem .9rem 0px 0px;
+
+    width: 15rem;
+    height: 3.3rem;
+
+}
+
+@mixin formInput {
+    border: 1px solid $color-green;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    color: $text-grey;
+
+    &::placeholder {
+        font-family: $font;
+    }
+}
+
+@mixin selectField {
+    border: 1px solid $color-green;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    color: $text-grey;
+
+    height: 4rem;
+}
+
+@mixin cardHours {
+    width: 8.5rem;
+    height: 8.5rem;
+
+    border-radius: 1rem;
+    box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $text-grey;
+    font-weight: 400;
+    
+    filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+
+}
+
+@mixin cardTaskItem {
+    width: 51.2rem;
+    height: 8.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: .6rem;
+
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(10.5px);
+
+    box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+
+    filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+} 
