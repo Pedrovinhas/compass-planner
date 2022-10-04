@@ -1,0 +1,254 @@
+.planner-calendar {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.6rem;
+
+    background-color: $color-white;
+
+    background-image: url('/assets/logo-compass.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    padding-top: 3.5rem;
+
+    .planner-calendar-container {
+        display: flex;
+        gap: 1.6rem;
+
+        h4 {
+            @include cardHours;
+
+            background-color: $color-white;
+        }
+
+        .planner-calender__day-filter {
+            display: flex;
+
+            gap: 2.8rem;
+
+            li {
+                button {
+                    @include cardButton;
+                }
+
+                .monday {
+                    background-color: $color-yellow;
+                }
+
+                .tuesday {
+                    background-color: $color-green-card;
+                }
+
+                .wednesday {
+                    background-color: $color-blue;
+                }
+
+                .thursday {
+                    background-color: $color-purple;
+                }
+
+                .friday {
+                    background-color: $color-blue-card;
+                }
+
+                .saturday {
+                    background-color: $color-pink;
+                }
+
+                .sunday {
+                    background-color: $color-red-card;
+                }
+            }
+        }
+    }
+
+    .planner-calendar__table {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.9rem;
+        gap: 1.6rem;
+        overflow: scroll;
+
+        height: 640px;
+        margin-right: 2.5rem;
+        padding-bottom: 3rem;
+        margin-bottom: 3.3rem;
+
+        
+
+        .planner-item {
+            display: flex;
+            
+            gap: 1.6rem;
+
+
+            .table__hours {
+                display: flex;
+                flex-direction: column;
+                gap: 0.9rem;
+    
+    
+                .hours__card {
+                    @include cardHours;
+    
+                     background-color: rgba(102, 136, 255, 0.4);
+                    
+                   
+                }
+
+                .card-color-red {
+                    background-color: rgba(255,102,102, 0.4);
+                }
+                
+                .card-color-green {
+                    background-color: rgba(53, 225, 133, 0.4);
+                }
+                
+                .card-color-soft-blue {
+                    background-color: rgba(102,209,255, 0.4); 
+                }
+                
+                .card-color-pink {
+                    background-color:rgba(255,102,212, 0.4);
+                }
+                
+                .card-color-purple {
+                    background-color: rgba(178,102,255, 0.4);
+                }
+                
+                .card-color-yellow {
+                    background-color: rgba(255, 162, 70, 0.4);
+                   
+                }
+                
+    
+    
+                .conflict {
+                    background: rgba(245, 93, 93, 0.4);
+                }
+    
+            }
+
+            
+            .card-border-red {
+                border-left: 1.4rem solid $color-red;
+            }
+            
+            .card-border-green {
+                border-left: 1.4rem solid $color-green-card;
+            }
+            
+            .card-border-soft-blue {
+                border-left: 1.4rem solid $color-blue-card;
+            }
+            
+            .card-border-pink {
+                border-left: 1.4rem solid $color-pink;
+            }
+            
+            .card-border-purple {
+                border-left: 1.4rem solid $color-purple;
+            }
+            
+            .card-border-yellow {
+                border-left: 1.4rem solid $color-yellow;
+            }
+
+            .card-border-blue {
+                border-left: 1.4rem solid $color-blue;
+            }
+            
+
+            .card-tasks__item {
+
+                @include cardTaskItem;
+
+
+                p {
+                    margin-left: 1.3rem;
+
+                }
+
+                button {
+                    align-self: flex-start;
+                    justify-self: flex-end;
+                    margin-top: 0.6rem;
+                    margin-right: 0.6rem;
+
+                    color: $color-white;
+                    background-color: $color-delete-button;
+                    width: 5.7rem;
+                    height: 2.5rem;
+
+
+                    border-radius: 0.4rem;
+
+                    padding: 1rem 1.2rem;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    cursor: pointer;
+                }
+            }
+
+            .conflict {
+                border-left: 1.4rem solid $color-conflict-card;
+            }
+
+            // .table__card-tasks {
+            //     display: flex;
+            //     flex-direction: column;
+            //     overflow: scroll;
+            //     width: 100vw;
+            //     gap: 0.9rem;
+            //     transform: rotateX(180deg);
+
+            //     position: relative;
+
+
+            //     bottom: 7px;
+
+            //     /* ===== Scrollbar CSS ===== */
+
+            //     * {
+            //         scrollbar-width: auto;
+            //         scrollbar-color: #b2aeae #ffffff;
+            //     }
+
+
+            //     &::-webkit-scrollbar {
+            //         width: 8px;
+            //         height: 8px;
+            //     }
+
+            //     &::-webkit-scrollbar-track {
+            //         background: #e0e0e0;
+            //         border-radius: 18px;
+            //     }
+
+            //     &::-webkit-scrollbar-thumb {
+            //         background-color: #524f4f;
+            //         border-radius: 18px;
+            //         border: 1px solid #ffffff;
+            //     }
+
+            // }
+
+
+            // .reverse {
+            //     display: flex;
+            //     flex-direction: column;
+            //     gap: 0.9rem;
+
+            //     transform: rotateX(180deg);
+
+            //     position: relative;
+            // }
+
+        
+        }
+    }
+
+}
