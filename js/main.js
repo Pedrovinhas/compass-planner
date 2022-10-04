@@ -12,6 +12,16 @@ const planner = document.querySelector(".planner-calendar__table");
 const cardTime = document.querySelectorAll(".hours__card");
 
 
+excludeAllTaskBtn.addEventListener("click", excludeAllTasksFromOneDay);
+
+function excludeAllTasksFromOneDay() {
+  deletedTaskList = taskList.filter((item) => item.dayOfWeek != selectedDay.value)
+  console.log(deletedTaskList)
+  taskList = deletedTaskList
+
+  alert(`Tarefas de ${selectedDay.value} excluídas com sucesso`)
+  displayTaskList(taskList);
+}
 
 const plannerForm = document.querySelector("#form");
 
