@@ -1,3 +1,7 @@
+<div align='center'>
+    <img height='400px' src="./assets/github.png">
+</div>
+
 
 <p align="center">
   <a href="#-Compass-Planner">📅 Projeto</a>&nbsp;&nbsp;|&nbsp;&nbsp;
