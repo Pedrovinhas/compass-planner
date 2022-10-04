@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compass Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/styles/css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navigation">
+            <div class="navigation__title">
+                <h1>
+                    Planejamento Semanal
+                </h1>
+                <p>
+                    Utilize o formulário para adicionar novas tarefas
+                </p>
+            </div>
+            <div class="navigation__buttons">
+                <button class="btn-save-local" type="button">
+                    Salvar localStorage
+                </button>
+                <button class="btn-exclude-local" type="button">
+                    Excluir localStorage
+                </button>
+            </div>
+            <div class="navigation__date">
+                <span class="time__hours"> </span>
+                <span class="time__date"> </span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="planner-bar">
+        <form class="planner-bar__form" id="form" action="#">
+            <input type="text" class="form-input__activities" placeholder="Atividade">
+            <select id="option-day" name="week-day" type="text" class="form-select__day">
+                <option value="monday"> Segunda-Feira</option>
+                <option value="tuesday"> Terça-Feira</option>
+                <option value="wednesday"> Quarta-Feira</option>
+                <option value="thursday"> Quinta-Feira</option>
+                <option value="friday"> Sexta-Feira</option>
+                <option value="saturday"> Sábado</option>
+                <option value="sunday"> Domingo</option>
+            </select>
+<!-- 
+            <div class="form-select__hour">
+                <select name="" id="">
+
+                </select>
+                <input type="number" id="input-minutes" placeholder="00" maxlength="2">  
+            </div> -->
+
+
+
+            <select id="option-time" type="text" class="form-select__hour">
+
+                <option value="1"> 10h30m </option>
+                <option value="2"> 11h00m </option>
+                <option value="3"> 13h10m </option>
+                <option value="4"> 15h00m </option>
+                <option value="5"> 16h55m </option>
+                <option value="6"> 17h25m </option>
+                <option value="7"> 22h15m </option>
+            </select>
+            <button type="submit" class="planner-bar__add">
+                <i class="fa-regular fa-plus"></i>
+                <p> Adicionar Atividade </p>
+            </button>
+            <button class="planner-bar__exclude" type="button">
+                <i class="fa-solid fa-minus"></i>
+                <p>
+                    Excluir Todos
+                </p>
+            </button>
+        </form>
+    </section>
+
+    <main class="planner-calendar">
+
+        <div class="planner-calendar-container">
+            <h4>
+                Horário
+            </h4>
+            <ul class="planner-calender__day-filter">
+                <li>
+                    <button data-day="monday" class="active monday">
+                        Segunda-Feira
+                    </button>
+
+                </li>
+                <li>
+                    <button data-day="tuesday" class="tuesday">
+                        Terça-feira
+                    </button>
+                </li>
+                <li>
+                    <button data-day="wednesday" class="wednesday">
+                        Quarta-Feira
+                    </button>
+                </li>
+                <li>
+                    <button data-day="thursday" class="thursday">
+                        Quinta-Feira
+                    </button>
+                </li>
+                <li>
+                    <button data-day="friday" class="friday">
+                        Sexta-Feira
+                    </button>
+                </li>
+                <li>
+                    <button data-day="saturday" class="saturday">
+                        Sábado
+                    </button>
+                </li>
+                <li>
+                    <button data-day="sunday" class="sunday">
+                        Domingo
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="planner-calendar__table" id="tasks-card">
+
+        </div>
+        <!-- <div class="card-tasks__item conflict" id="order-4">
+            <p>
+                asdr adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+            <button class="card__delete-button" type="button">
+                Apagar
+            </button>
+        </div> -->
+        </div>
+
+
+    </main>
+
+    <script src="/js/formValidation.js"></script>
+    <script src="/js/getTime.js"></script>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
