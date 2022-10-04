@@ -10,7 +10,7 @@ const excludeAllTaskBtn = document.querySelector(".planner-bar__exclude");
 const planner = document.querySelector(".planner-calendar__table");
 
 const cardTime = document.querySelectorAll(".hours__card");
-
+let day;
 const dayColors = {
   monday: {
     bg: "card-color-yellow",
@@ -47,14 +47,14 @@ taskList = JSON.parse(localStorage.getItem("taskList")) || [];
 plannerDaysOfWeek.forEach(plannerDay =>
   plannerDay.addEventListener("click", () => {
     const dayOfWeek = plannerDay.dataset.day;
-
+    day = dayOfWeek
     
     document.querySelector('.active').classList.remove('active')
 
     plannerDay.classList.add('active')
 
   //  plannerDay.classList.contains('active') ? plannerDay.classList.remove('active')  : plannerDay.classList.toggle('active')
-    console.log(plannerDaysOfWeek[1])
+  
     displayDayTasks(dayOfWeek);
   })
 );
@@ -67,6 +67,7 @@ function displayDayTasks(dayTasks) {
 // Adicionar task
 
 function addTask() {
+
   const task = {
     id: taskList.length,
     content: activitiesContent.value,
@@ -77,18 +78,28 @@ function addTask() {
   };
 
   taskList.push(task);
-  // displayTaskList(taskList);
+  
+  console.log(task.dayOfWeek, task.dayTimeValue)
+
+  
+  taskList.sort((a, b) => a.dayTimeValue - b.dayTimeValue);
+  displayDayTasks(day);
 }
+
 
 excludeAllTaskBtn.addEventListener("click", excludeAllTasksFromOneDay);
 
 function excludeAllTasksFromOneDay() {
-  deletedTaskList = taskList.filter((item) => item.dayOfWeek != selectedDay.value)
-  console.log(deletedTaskList)
+  deletedTaskList = taskList.filter((item) => item.dayOfWeek !== day)
+  // console.log(deletedTaskList)
   taskList = deletedTaskList
 
-  alert(`Tarefas de ${selectedDay.value} excluídas com sucesso`)
-  displayTaskList(taskList);
+  alert(`Tarefas de ${day} excluídas com sucesso`)
+  
+  displayTaskList(day);
+  console.log(day)
+  console.log(taskList)
+ 
 }
 
 const plannerForm = document.querySelector("#form");
@@ -108,7 +119,8 @@ plannerForm.addEventListener("submit", (event) => {
 function displayTaskList(list) {
   const cardTasks = document.getElementById("tasks-card");
   cardTasks.innerHTML = "";
-  console.log(list);
+
+  // console.log(list);
   list.forEach((task) => {
     const plannerItem = document.createElement("div");
     plannerItem.classList.add("planner-item");
@@ -129,8 +141,6 @@ function displayTaskList(list) {
     task.dayOfWeek == 'friday' ? cardHours.classList.add('card-color-soft-blue') : 
     task.dayOfWeek == 'saturday' ? cardHours.classList.add('card-color-pink') : ''
     task.dayOfWeek == 'sunday' ? cardHours.classList.add('card-color-red') : ''
-  
-
 
     cardHours.innerHTML = `${task.dayTime}`;
 
@@ -163,16 +173,17 @@ function displayTaskList(list) {
     plannerItem.appendChild(cardItem);
 
     cardTasks.appendChild(plannerItem);
-    console.log(taskList);
+    // console.log(taskList);
 
     deleteBtn.addEventListener("click", () => {
       updatedTaskList = taskList.filter((item) => item != task);
       taskList = updatedTaskList;
       console.log(taskList);
-      displayTaskList(taskList);
+      displayDayTasks(day);
     });
 
-    taskList.sort((a, b) => a.dayTimeValue - b.dayTimeValue);
+
+    // taskList.sort((a, b) => a.dayTimeValue - b.dayTimeValue);
   });
 }
 
@@ -186,10 +197,14 @@ btnDeleteFromLocalStorage.addEventListener("click", deleteFromLocalStorage);
 
 function saveLocalStorage() {
   localStorage.setItem("taskList", JSON.stringify(taskList));
+  alert('Atividades salvas no Local Storage.')
 }
 
 function deleteFromLocalStorage() {
+  
+  alert('Atividades excluídas do Local Storage.')
   localStorage.clear();
   taskList = [];
   displayTaskList();
+
 }

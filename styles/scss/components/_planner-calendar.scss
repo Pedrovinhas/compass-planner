@@ -62,6 +62,11 @@
         }
     }
 
+    .reverse {
+        transform: rotateX(180deg);
+    }
+
+
     .planner-calendar__table {
         display: flex;
         flex-direction: column;
@@ -73,6 +78,34 @@
         margin-right: 2.5rem;
         padding-bottom: 3rem;
         margin-bottom: 3.3rem;
+
+     
+        
+                /* ===== Scrollbar CSS ===== */
+
+                * {
+                    scrollbar-width: auto;
+                    scrollbar-color: #b2aeae #ffffff;
+                }
+
+
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #e0e0e0;
+                    border-radius: 18px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #524f4f;
+                    border-radius: 18px;
+                    border: 1px solid #ffffff;
+                }
+
+            
 
         
 
@@ -210,31 +243,6 @@
 
             //     bottom: 7px;
 
-            //     /* ===== Scrollbar CSS ===== */
-
-            //     * {
-            //         scrollbar-width: auto;
-            //         scrollbar-color: #b2aeae #ffffff;
-            //     }
-
-
-            //     &::-webkit-scrollbar {
-            //         width: 8px;
-            //         height: 8px;
-            //     }
-
-            //     &::-webkit-scrollbar-track {
-            //         background: #e0e0e0;
-            //         border-radius: 18px;
-            //     }
-
-            //     &::-webkit-scrollbar-thumb {
-            //         background-color: #524f4f;
-            //         border-radius: 18px;
-            //         border: 1px solid #ffffff;
-            //     }
-
-            // }
 
 
             // .reverse {

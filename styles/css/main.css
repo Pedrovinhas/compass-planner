@@ -30,13 +30,8 @@ input, input:focus {
 }
 
 .active {
-  -webkit-transform: translateY(-15px);
-          transform: translateY(-15px);
-}
-
-.inactive {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .header {
@@ -395,6 +390,11 @@ input, input:focus {
   background-color: #FF6666;
 }
 
+.planner-calendar .reverse {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 .planner-calendar .planner-calendar__table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,6 +410,28 @@ input, input:focus {
   margin-right: 2.5rem;
   padding-bottom: 3rem;
   margin-bottom: 3.3rem;
+  /* ===== Scrollbar CSS ===== */
+}
+
+.planner-calendar .planner-calendar__table * {
+  scrollbar-width: auto;
+  scrollbar-color: #b2aeae #ffffff;
+}
+
+.planner-calendar .planner-calendar__table::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.planner-calendar .planner-calendar__table::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 18px;
+}
+
+.planner-calendar .planner-calendar__table::-webkit-scrollbar-thumb {
+  background-color: #524f4f;
+  border-radius: 18px;
+  border: 1px solid #ffffff;
 }
 
 .planner-calendar .planner-calendar__table .planner-item {
@@ -565,40 +587,5 @@ input, input:focus {
 
 .planner-calendar .planner-calendar__table .planner-item .conflict {
   border-left: 1.4rem solid #F55D5D;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-7 {
-  position: absolute;
-  top: -80px;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-6 {
-  position: absolute;
-  top: -174px;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-5 {
-  position: absolute;
-  top: -265px;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-4 {
-  position: absolute;
-  top: -357px;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-3 {
-  position: absolute;
-  top: -450px;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-2 {
-  position: absolute;
-  top: -545px;
-}
-
-.planner-calendar .planner-calendar__table .planner-item .order-1 {
-  position: absolute;
-  top: -640px;
 }
 /*# sourceMappingURL=main.css.map */
