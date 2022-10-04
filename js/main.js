@@ -94,7 +94,7 @@ function excludeAllTasksFromOneDay() {
   // console.log(deletedTaskList)
   taskList = deletedTaskList
 
-  alert(`Tarefas de ${day} excluídas com sucesso`)
+  alert(`Tarefas de ${day} excluídas do planner`)
   
   displayTaskList(day);
   console.log(day)
