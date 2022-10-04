@@ -11,6 +11,58 @@ const planner = document.querySelector(".planner-calendar__table");
 
 const cardTime = document.querySelectorAll(".hours__card");
 
+const dayColors = {
+  monday: {
+    bg: "card-color-yellow",
+    border: "border-color-yellow",
+  },
+  tuesday: {
+    bg: "card-color-green",
+    border: "border-color-green",
+  },
+  wednesday: "",
+  thursday: {
+    bg: "card-color-purple",
+    border: "border-color-purple",
+  },
+  friday: {
+    bg: "card-color-soft-blue",
+    border: "border-color-blue",
+  },
+  saturday: {
+    bg: "card-color-pink",
+    border: "border-color-pink",
+  },
+  sunday: {
+    bg: "card-color-red",
+    border: "border-color-red",
+  },
+};
+
+taskList = JSON.parse(localStorage.getItem("taskList")) || [];
+
+// Mostrando as tasks de cada dia da Semana
+
+
+plannerDaysOfWeek.forEach(plannerDay =>
+  plannerDay.addEventListener("click", () => {
+    const dayOfWeek = plannerDay.dataset.day;
+
+    
+    document.querySelector('.active').classList.remove('active')
+
+    plannerDay.classList.add('active')
+
+  //  plannerDay.classList.contains('active') ? plannerDay.classList.remove('active')  : plannerDay.classList.toggle('active')
+    console.log(plannerDaysOfWeek[1])
+    displayDayTasks(dayOfWeek);
+  })
+);
+
+function displayDayTasks(dayTasks) {
+  let tasksOfEachDay = taskList.filter((task) => task.dayOfWeek === dayTasks); // Lista filtrada da Lista Total por dia da semana
+  displayTaskList(tasksOfEachDay);
+}
 
 // Adicionar task
 
