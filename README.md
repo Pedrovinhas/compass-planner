@@ -2,11 +2,11 @@
 <p align="center">
   <a href="#-Compass-Planner">📅 Projeto</a>&nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="#-Tecnologias"> 👩‍💻 Tecnologias</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-  <a href="#-Requisitos">  🔖 Requisitos  </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-Requisitos">  📝 Requisitos  </a>&nbsp;&nbsp;|&nbsp;&nbsp;
 </p>
 
 ## 📅 Compass Planner
-Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de bolsas da Compass Uol. O Objetivo é construir um planner conforme o layout do [Figma](https://www.figma.com/file/SB6I496lrUWjhHFYLpbhiZ/Folio-Agency-1.0-(Community)-(Copy)?node-id=0%3A695), utilizando **HTML5**,**SCSS** e **JavaScript** e seguindo os requisitos propostos.
+Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de bolsas da Compass Uol. O objetivo é construir um planner conforme o layout do [Figma](https://www.figma.com/file/SB6I496lrUWjhHFYLpbhiZ/Folio-Agency-1.0-(Community)-(Copy)?node-id=0%3A695), utilizando **HTML5**,**SCSS** e **JavaScript** e seguindo os requisitos propostos.
 
 
 ## 👩‍💻 Tecnologias
@@ -36,8 +36,8 @@ Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de 
 
 
 ### 🔨 Retaforação
-[ ] JavaScript Funcionalidades
-[X] SCSS
+- [ ] JavaScript Funcionalidades
+- [X] SCSS
 
 ---
 
