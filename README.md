@@ -38,10 +38,10 @@ Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de 
 - [X] Salvar/recuperar as atividades do localStorage
 - [X] Scroll estilizado
 
-### Requisitos adicionais
-- [] Animações ao adicionar um card
-- [] Skeleton-Animation ao carregar itens do local-storage
-- [] Substituir alert() por toast notifications
+### ➕ Requisitos adicionais
+- [ ] Animações ao adicionar um card
+- [ ] Skeleton-Animation ao carregar itens do local-storage
+- [ ] Substituir `alert()` por toast notifications
 
 ### 📱 Responsividade  
 - [X] Desktop
