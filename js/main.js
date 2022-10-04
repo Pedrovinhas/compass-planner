@@ -13,6 +13,19 @@ const cardTime = document.querySelectorAll(".hours__card");
 
 
 
+const plannerForm = document.querySelector("#form");
+
+plannerForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (activitiesContent.value !== "") {
+    addTask(activitiesContent.value);
+    activitiesContent.value = "";
+  } else {
+    alert("Preencha os campos em branco");
+  }
+});
+
 // Renderiza a lista de atividadaes
 function displayTaskList(list) {
   const cardTasks = document.getElementById("tasks-card");
