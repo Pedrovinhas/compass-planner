@@ -1,0 +1,72 @@
+.planner-bar {
+    padding-top: 2rem;
+    padding-left: 5rem;
+
+    height: 4.4rem;
+    width: 100%;
+
+    background-color: $color-white;
+
+    form {
+        display: flex;
+        align-items: center;
+        gap: 2.7rem;
+
+        input {
+            @include formInput;
+        }
+
+        select {
+            @include formInput;
+        }
+
+        .form-input__activities {
+            width: 42.4rem;
+            height: 4rem;
+
+            padding: 1rem 19.8rem 1rem 1.2rem;
+        }
+
+        .form-select__day {
+            width: 21rem;
+            height: 4rem;
+            color: $text-grey;
+            font-size: 1.4rem;
+
+            font-family: $font;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+
+        }
+
+        .form-select__hour {
+            padding: 1rem 1.2rem;
+            height: 4rem;
+
+            color: $text-grey;
+            font-size: 1.4rem;
+
+            font-family: $font;
+
+
+        }
+
+        .planner-bar__add {
+            @include button;
+            gap: 0.4rem;
+            background-color: $color-green;
+
+            width: 22.2rem;
+        }
+
+        .planner-bar__exclude {
+            @include button;
+
+            width: 18.4rem;
+
+            gap: 0.4rem;
+            background-color: $color-red;
+        }
+    }
+
+}
