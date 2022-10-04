@@ -11,6 +11,7 @@ const planner = document.querySelector(".planner-calendar__table");
 
 const cardTime = document.querySelectorAll(".hours__card");
 let day;
+
 const dayColors = {
   monday: {
     bg: "card-color-yellow",
@@ -86,6 +87,7 @@ function addTask() {
   displayDayTasks(day);
 }
 
+// Excluir todas as Tasks do dia
 
 excludeAllTaskBtn.addEventListener("click", excludeAllTasksFromOneDay);
 
@@ -102,6 +104,8 @@ function excludeAllTasksFromOneDay() {
  
 }
 
+// Validação formulário
+
 const plannerForm = document.querySelector("#form");
 
 plannerForm.addEventListener("submit", (event) => {
@@ -116,6 +120,7 @@ plannerForm.addEventListener("submit", (event) => {
 });
 
 // Renderiza a lista de atividadaes
+
 function displayTaskList(list) {
   const cardTasks = document.getElementById("tasks-card");
   cardTasks.innerHTML = "";
