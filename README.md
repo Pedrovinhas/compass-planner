@@ -23,7 +23,7 @@ Compass Planner foi o projeto da **3ª Sprint** e o **Desafio 4** do projeto de 
 - ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
 
 ### 📔 Bibliotecas
-- FontAwesomeIcons
+- [FontAwesomeIcons](https://fontawesome.com/)
 
 ## 📝 Requisitos 
 - [X] Adicionar as atividades no dia e hora selecionados
