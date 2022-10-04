@@ -1,0 +1,604 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background-color: #E5E5E5;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input, input:focus {
+  font-family: "Poppins", sans-serif;
+}
+
+.active {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.inactive {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.header {
+  height: 13.1rem;
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8rem;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 4px 24px rgba(168, 168, 168, 0.25);
+          box-shadow: 0 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 3.5rem;
+}
+
+.header__navigation .navigation__title {
+  width: 58.8rem;
+  height: 50%;
+  background-color: #6688FF;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0 1.4rem 1.5rem 0;
+  padding-left: 1.6rem;
+}
+
+.header__navigation .navigation__title p {
+  font-size: 1.4rem;
+}
+
+.header__navigation .navigation__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.header__navigation .navigation__buttons button {
+  color: #FFFFFF;
+  width: 18rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+}
+
+.header__navigation .navigation__buttons .btn-save-local {
+  background-color: #2CBE82;
+}
+
+.header__navigation .navigation__buttons .btn-exclude-local {
+  background-color: #DA2B40;
+}
+
+.header__navigation .navigation__date {
+  justify-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24.1rem;
+  margin-right: 3.7rem;
+  color: #3B3E45;
+}
+
+.header__navigation .navigation__date .time__hours {
+  font-size: 4rem;
+}
+
+.planner-bar {
+  padding-top: 2rem;
+  padding-left: 5rem;
+  height: 4.4rem;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.planner-bar form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.7rem;
+}
+
+.planner-bar form input {
+  border: 1px solid #2CBE82;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  color: #3B3E45;
+}
+
+.planner-bar form input::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form input:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form input::-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form select {
+  border: 1px solid #2CBE82;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  color: #3B3E45;
+}
+
+.planner-bar form select::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form select:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form select::-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form select::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form .form-input__activities {
+  width: 42.4rem;
+  height: 4rem;
+  padding: 1rem 19.8rem 1rem 1.2rem;
+}
+
+.planner-bar form .form-select__day {
+  width: 21rem;
+  height: 4rem;
+  color: #3B3E45;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.planner-bar form .form-select__hour {
+  padding: 1rem 1.2rem;
+  height: 4rem;
+  color: #3B3E45;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.planner-bar form .planner-bar__add {
+  color: #FFFFFF;
+  width: 18rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  gap: 0.4rem;
+  background-color: #2CBE82;
+  width: 22.2rem;
+}
+
+.planner-bar form .planner-bar__exclude {
+  color: #FFFFFF;
+  width: 18rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  border-radius: 1rem;
+  width: 18.4rem;
+  gap: 0.4rem;
+  background-color: #DA2B40;
+}
+
+.planner-calendar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 1.6rem;
+  background-color: #FFFFFF;
+  background-image: url("/assets/logo-compass.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-top: 3.5rem;
+}
+
+.planner-calendar .planner-calendar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.planner-calendar .planner-calendar-container h4 {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+          box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #3B3E45;
+  font-weight: 400;
+  -webkit-filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+          filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+  background-color: #FFFFFF;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.8rem;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li button {
+  color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+          box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border: none;
+  border-radius: .9rem .9rem 0px 0px;
+  width: 15rem;
+  height: 3.3rem;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .monday {
+  background-color: #FFA246;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .tuesday {
+  background-color: #35E185;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .wednesday {
+  background-color: #6688FF;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .thursday {
+  background-color: #B266FF;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .friday {
+  background-color: #66D1FF;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .saturday {
+  background-color: #FF66D4;
+}
+
+.planner-calendar .planner-calendar-container .planner-calender__day-filter li .sunday {
+  background-color: #FF6666;
+}
+
+.planner-calendar .planner-calendar__table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 0.9rem;
+  gap: 1.6rem;
+  overflow: scroll;
+  height: 640px;
+  margin-right: 2.5rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3.3rem;
+}
+
+.planner-calendar .planner-calendar__table .planner-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9rem;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .hours__card {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+          box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #3B3E45;
+  font-weight: 400;
+  -webkit-filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+          filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+  background-color: rgba(102, 136, 255, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .card-color-red {
+  background-color: rgba(255, 102, 102, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .card-color-green {
+  background-color: rgba(53, 225, 133, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .card-color-soft-blue {
+  background-color: rgba(102, 209, 255, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .card-color-pink {
+  background-color: rgba(255, 102, 212, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .card-color-purple {
+  background-color: rgba(178, 102, 255, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .card-color-yellow {
+  background-color: rgba(255, 162, 70, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .table__hours .conflict {
+  background: rgba(245, 93, 93, 0.4);
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-red {
+  border-left: 1.4rem solid #DA2B40;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-green {
+  border-left: 1.4rem solid #35E185;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-soft-blue {
+  border-left: 1.4rem solid #66D1FF;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-pink {
+  border-left: 1.4rem solid #FF66D4;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-purple {
+  border-left: 1.4rem solid #B266FF;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-yellow {
+  border-left: 1.4rem solid #FFA246;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-border-blue {
+  border-left: 1.4rem solid #6688FF;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-tasks__item {
+  width: 51.2rem;
+  height: 8.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: .6rem;
+  background-color: #FFFFFF;
+  border-radius: 1.5rem;
+  -webkit-backdrop-filter: blur(10.5px);
+          backdrop-filter: blur(10.5px);
+  -webkit-box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 2px 5.5px rgba(0, 0, 0, 0.02);
+  -webkit-filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+          filter: drop-shadow(0px 4px 24px rgba(168, 168, 168, 0.25));
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-tasks__item p {
+  margin-left: 1.3rem;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .card-tasks__item button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  justify-self: flex-end;
+  margin-top: 0.6rem;
+  margin-right: 0.6rem;
+  color: #FFFFFF;
+  background-color: #98031E;
+  width: 5.7rem;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+  padding: 1rem 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .conflict {
+  border-left: 1.4rem solid #F55D5D;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-7 {
+  position: absolute;
+  top: -80px;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-6 {
+  position: absolute;
+  top: -174px;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-5 {
+  position: absolute;
+  top: -265px;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-4 {
+  position: absolute;
+  top: -357px;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-3 {
+  position: absolute;
+  top: -450px;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-2 {
+  position: absolute;
+  top: -545px;
+}
+
+.planner-calendar .planner-calendar__table .planner-item .order-1 {
+  position: absolute;
+  top: -640px;
+}
+/*# sourceMappingURL=main.css.map */
